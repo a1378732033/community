@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>社区</title>
+    <title>发布-社区</title>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="css/community.css"/>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
 
 </head>
 <body>
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">服务社区</span>
 
             </button>
-            <a class="navbar-brand" href="#">服务社区</a>
+            <a class="navbar-brand" href="/">服务社区</a>
         </div>
 
 
@@ -42,6 +44,37 @@
                         登录</a></li>
 
             </ul>
+        </div>
+    </div>
+    <div class="container-fluid main" >
+
+          <div class="col-lg-9 col-md-12 col-xs-12">
+              <h2 ><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>发起</h2>
+              <hr>
+              <FORM action="">
+                  <div class="form-group">
+                      <label for="title">简单标题</label>
+                      <input type="text" class="form-control" id="title" name="title" placeholder="问题标题">
+                  </div>
+                  <div class="form-group">
+                      <label for="title">问题内容(必填,注意左侧提示)</label>
+                      <textarea name="description" id="description" class="form-control" cols="30" row="10" style="margin: 0px -2.75px 0px 0px; width: 1329px; height: 515px;"></textarea>
+                  </div>
+                  <div class="form-group">
+                      <label for="title">添加标签</label>
+                      <input type="text" class="form-control" id="tag" name="tag" placeholder="输入标签以','分隔">
+                  </div>
+                  <button type="submit" class="btn btn-success btn-publish">发布</button>
+              </FORM>
+
+          </div>
+           <div
+             class="col-lg-3 col-md-12 col-xs-12"  >
+                <h3>发起问题指南</h3>
+                问题标题：请用简洁的语言描述你发布的问题,不超过25个字</br>
+            问题内容：详细说明你要发布的问题内容，并且确保问题描述清晰直观,并提供一些相关资料</br>
+                选择标签：选择一个或多个合适的标签
+            </div>
         </div>
     </div>
 </nav>
