@@ -2,10 +2,7 @@ package life.gjj.community.community.mapper;
 
 
 import life.gjj.community.community.model.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -15,4 +12,6 @@ public interface UserMapper {
             "(#{name},#{accountId},#{token},#{gmtCreate},#{gmtModified})")
     @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn ="id" )
     public  void insert(User user);
+    @Select("select *from user where token=#{token}")
+     User findByToken(@Param("token") String token);
 }
