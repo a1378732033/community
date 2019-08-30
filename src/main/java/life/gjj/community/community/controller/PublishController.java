@@ -27,12 +27,29 @@ public class PublishController {
     UserMapper userMapper;
     @PostMapping("/publish")
     public  String doPubilsh(
-            @RequestParam("title") String title,
-            @RequestParam("description") String description,
-            @RequestParam("tag") String tag,
+            @RequestParam( value = "title",required = false) String title,
+            @RequestParam(value = "description",required = false) String description,
+            @RequestParam(value = "tag",required = false) String tag,
             HttpServletRequest request,
             Model model
     ){
+        model.addAttribute("title",title);
+        model.addAttribute("description",description);
+        model.addAttribute("tag",tag);
+        if (title==null||title==""){
+            model.addAttribute("error","标题不能为空");
+            return "pubilsh";
+        }
+        if (description==null||description==""){
+            model.addAttribute("error","内容不能为空");
+            return "pubilsh";
+        }
+        if (tag==null||tag==""){
+            model.addAttribute("error","请添加标签");
+            return "pubilsh";
+        }
+
+
         Cookie[] cookies = request.getCookies();
         User user=null;
         if (cookies!=null) {
@@ -49,7 +66,7 @@ public class PublishController {
             }
         }else {
             model.addAttribute("error","请重新登录");
-            return "redirect:/";
+            return "pubilsh";
         }
         Question question = new Question();
         question.setTitle(title);

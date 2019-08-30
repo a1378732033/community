@@ -1,9 +1,8 @@
-package life.gjj.community.community.model;
+package life.gjj.community.community.dto;
 
-import lombok.Data;
+import life.gjj.community.community.model.User;
 
-@Data
-public class Question {
+public class QuestionDTO {
     private Integer id;
     private String title;
     private String description;
@@ -14,11 +13,12 @@ public class Question {
     private Integer viewCount;
     private Integer likeCount;
     private String tag;
+    private User user;
 
-    public Question() {
+    public QuestionDTO() {
     }
 
-    public Question(Integer id, String title, String description, Long gmtCreate, Long gmtModified, Integer creator, Integer commentCount, Integer viewCount, Integer likeCount, String tag) {
+    public QuestionDTO(Integer id, String title, String description, Long gmtCreate, Long gmtModified, Integer creator, Integer commentCount, Integer viewCount, Integer likeCount, String tag, User user) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -29,11 +29,12 @@ public class Question {
         this.viewCount = viewCount;
         this.likeCount = likeCount;
         this.tag = tag;
+        this.user = user;
     }
 
     @Override
     public String toString() {
-        return "Question{" +
+        return "QuestionDTO{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
@@ -44,6 +45,7 @@ public class Question {
                 ", viewCount=" + viewCount +
                 ", likeCount=" + likeCount +
                 ", tag='" + tag + '\'' +
+                ", user=" + user +
                 '}';
     }
 
@@ -125,5 +127,13 @@ public class Question {
 
     public void setTag(String tag) {
         this.tag = tag;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -1,6 +1,8 @@
 package life.gjj.community.community.model;
 
+import lombok.Data;
 
+@Data
 public class User {
 
   private Integer id;
@@ -9,6 +11,20 @@ public class User {
   private String token;
   private Long gmtCreate;
   private Long gmtModified;
+  private String avatarUrl;
+
+  public User() {
+  }
+
+  public User(Integer id, String accountId, String name, String token, Long gmtCreate, Long gmtModified, String avatarUrl) {
+    this.id = id;
+    this.accountId = accountId;
+    this.name = name;
+    this.token = token;
+    this.gmtCreate = gmtCreate;
+    this.gmtModified = gmtModified;
+    this.avatarUrl = avatarUrl;
+  }
 
   @Override
   public String toString() {
@@ -19,6 +35,7 @@ public class User {
             ", token='" + token + '\'' +
             ", gmtCreate=" + gmtCreate +
             ", gmtModified=" + gmtModified +
+            ", avatarUrl='" + avatarUrl + '\'' +
             '}';
   }
 
@@ -68,5 +85,13 @@ public class User {
 
   public void setGmtModified(Long gmtModified) {
     this.gmtModified = gmtModified;
+  }
+
+  public String getAvatarUrl() {
+    return avatarUrl;
+  }
+
+  public void setAvatarUrl(String avatarUrl) {
+    this.avatarUrl = avatarUrl;
   }
 }

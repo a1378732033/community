@@ -1,5 +1,7 @@
 package life.gjj.community.community.dto;
 
+
+
 public class AccessTikenDTO {
     private  String client_id;
     private  String client_secret;
