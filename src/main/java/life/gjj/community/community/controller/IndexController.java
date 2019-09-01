@@ -24,7 +24,9 @@ public class IndexController {
     @Autowired
     QuestionService questionService;
     @GetMapping("/")
-    public String hell(HttpServletRequest request,Model model){
+    public String hell(HttpServletRequest request,Model model,
+                       @RequestParam(value = "page",defaultValue = "1")Integer page,
+                       @RequestParam(value = "size",defaultValue = "5")Integer size){
 
         Cookie[] cookies = request.getCookies();
         if (cookies!=null) {
@@ -40,7 +42,7 @@ public class IndexController {
                 }
             }
         }
-        List<QuestionDTO>  questionList=questionService.list();
+        List<QuestionDTO>  questionList=questionService.list(page,size);
         model.addAttribute("questions",questionList);
         return "index";
     }
