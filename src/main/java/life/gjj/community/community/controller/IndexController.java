@@ -1,5 +1,6 @@
 package life.gjj.community.community.controller;
 
+import life.gjj.community.community.dto.PaginationDTO;
 import life.gjj.community.community.dto.QuestionDTO;
 import life.gjj.community.community.mapper.QuestionMapper;
 import life.gjj.community.community.mapper.UserMapper;
@@ -26,7 +27,7 @@ public class IndexController {
     @GetMapping("/")
     public String hell(HttpServletRequest request,Model model,
                        @RequestParam(value = "page",defaultValue = "1")Integer page,
-                       @RequestParam(value = "size",defaultValue = "5")Integer size){
+                       @RequestParam(value = "size",defaultValue = "4")Integer size){
 
         Cookie[] cookies = request.getCookies();
         if (cookies!=null) {
@@ -42,8 +43,8 @@ public class IndexController {
                 }
             }
         }
-        List<QuestionDTO>  questionList=questionService.list(page,size);
-        model.addAttribute("questions",questionList);
+        PaginationDTO pagination=questionService.list(page,size);
+        model.addAttribute("pagination",pagination);
         return "index";
     }
 }
