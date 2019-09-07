@@ -23,8 +23,6 @@ public class PublishController {
     }
     @Autowired
     QuestionMapper questionMapper;
-    @Autowired
-    UserMapper userMapper;
     @PostMapping("/publish")
     public  String doPubilsh(
             @RequestParam( value = "title",required = false) String title,
@@ -48,23 +46,8 @@ public class PublishController {
             model.addAttribute("error","请添加标签");
             return "pubilsh";
         }
-
-
-        Cookie[] cookies = request.getCookies();
-        User user=null;
-        if (cookies!=null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("token")) ;
-                {
-                    String token = cookie.getValue();
-                    user= userMapper.findByToken(token);
-                    if (user!= null) {
-                        request.getSession().setAttribute("user", user);
-                    }
-                    break;
-                }
-            }
-        }else {
+        User user = (User)request.getSession().getAttribute("user");
+        if (user==null){
             model.addAttribute("error","请重新登录");
             return "pubilsh";
         }

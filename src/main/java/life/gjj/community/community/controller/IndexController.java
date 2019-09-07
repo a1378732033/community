@@ -21,28 +21,11 @@ import java.util.List;
 @Controller
 public class IndexController {
     @Autowired
-    UserMapper userMapper;
-    @Autowired
     QuestionService questionService;
     @GetMapping("/")
     public String hell(HttpServletRequest request,Model model,
                        @RequestParam(value = "page",defaultValue = "1")Integer page,
                        @RequestParam(value = "size",defaultValue = "4")Integer size){
-
-        Cookie[] cookies = request.getCookies();
-        if (cookies!=null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("token")) ;
-                {
-                    String token = cookie.getValue();
-                    User user = userMapper.findByToken(token);
-                    if (user != null) {
-                        request.getSession().setAttribute("user", user);
-                    }
-                    break;
-                }
-            }
-        }
         PaginationDTO pagination=questionService.list(page,size);
         model.addAttribute("pagination",pagination);
         return "index";
