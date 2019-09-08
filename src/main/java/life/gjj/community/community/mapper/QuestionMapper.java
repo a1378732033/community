@@ -1,12 +1,6 @@
 package life.gjj.community.community.mapper;
-
-import life.gjj.community.community.dto.QuestionDTO;
 import life.gjj.community.community.model.Question;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-
+import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 public interface QuestionMapper {
@@ -24,4 +18,7 @@ public interface QuestionMapper {
     Integer countByUserId(@Param(value ="userId")Integer userId);
     @Select("select *from question where id=#{id}")
     Question getById(@Param("id") Integer id );
+    @Update("update question set title=#{title},description=#{description},gmt_modified=#{gmtModified},tag=#{tag} where " +
+            "id=#{id}")
+    void update(Question question);
 }
