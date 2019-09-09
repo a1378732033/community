@@ -9,6 +9,7 @@
                         connectionURL="jdbc:mysql://10.13.48.40:3306/community"
                         userId="root"
                         password="123456">
+            <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
