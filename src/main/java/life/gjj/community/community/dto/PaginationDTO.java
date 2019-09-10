@@ -11,23 +11,12 @@ public class PaginationDTO {
     boolean showFirstPage;//首页
     boolean showNext;//下一页
     boolean showEndPage;//尾页
-
     Integer page;
     List<Integer> pages=new ArrayList();
     Integer totalPage;
-    public void setPagintion(Integer totalcount, Integer page, Integer size) {
+    public void setPagintion(Integer totalPage, Integer page) {
         this.page=page;
-        if(totalcount % size==0){
-           totalPage=totalcount/size;
-        }else {
-            totalPage=totalcount/size+1;
-        }
-        if(page<1){
-            page=1;
-        }
-        if(page>totalPage){
-            page=totalPage;
-        }
+        this.totalPage=totalPage;
         pages.add(page);
         for (int i=1;i<=3;i++){
             if(page-i>0){
