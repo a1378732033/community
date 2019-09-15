@@ -43,7 +43,7 @@
                 </li>
                 <li th:each="page:${pagination.pages}" th:class="${pagination.page==page}?'active':''">
                     <a href="/" th:text="${page}"
-                       th:href="@{/(page=${page})} ">
+                       th:href="@{/(page=${page})} " >
 
                     </a>
                 </li>

@@ -50,7 +50,6 @@ public class AuthorizeController {
           user.setAvatarUrl(gitHubuser.getAvatarUrl());
           userService.creareOrUpdate(user);
           response.addCookie(new Cookie("token",token));
-//          request.getSession().setAttribute("user",gitHubuser);
           return "redirect:/";
       }else{
           //登陆失败

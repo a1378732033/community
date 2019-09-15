@@ -1,97 +1,83 @@
 package life.gjj.community.community.model;
 
-import lombok.Data;
-
-@Data
 public class User {
+    private Long id;
 
-  private Integer id;
-  private String accountId;
-  private String name;
-  private String token;
-  private Long gmtCreate;
-  private Long gmtModified;
-  private String avatarUrl;
+    private String accountId;
 
-  public User() {
-  }
+    private String name;
 
-  public User(Integer id, String accountId, String name, String token, Long gmtCreate, Long gmtModified, String avatarUrl) {
-    this.id = id;
-    this.accountId = accountId;
-    this.name = name;
-    this.token = token;
-    this.gmtCreate = gmtCreate;
-    this.gmtModified = gmtModified;
-    this.avatarUrl = avatarUrl;
-  }
+    private String token;
 
-  @Override
-  public String toString() {
-    return "User{" +
-            "id=" + id +
-            ", accountId='" + accountId + '\'' +
-            ", name='" + name + '\'' +
-            ", token='" + token + '\'' +
-            ", gmtCreate=" + gmtCreate +
-            ", gmtModified=" + gmtModified +
-            ", avatarUrl='" + avatarUrl + '\'' +
-            '}';
-  }
+    private Long gmtCreate;
 
-  public Integer getId() {
-    return id;
-  }
+    private Long gmtModified;
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
+    private String bio;
 
-  public String getAccountId() {
-    return accountId;
-  }
+    private String avatarUrl;
 
-  public void setAccountId(String accountId) {
-    this.accountId = accountId;
-  }
+    public Long getId() {
+        return id;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public String getAccountId() {
+        return accountId;
+    }
 
-  public String getToken() {
-    return token;
-  }
+    public void setAccountId(String accountId) {
+        this.accountId = accountId == null ? null : accountId.trim();
+    }
 
-  public void setToken(String token) {
-    this.token = token;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public Long getGmtCreate() {
-    return gmtCreate;
-  }
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
-  public void setGmtCreate(Long gmtCreate) {
-    this.gmtCreate = gmtCreate;
-  }
+    public String getToken() {
+        return token;
+    }
 
-  public Long getGmtModified() {
-    return gmtModified;
-  }
+    public void setToken(String token) {
+        this.token = token == null ? null : token.trim();
+    }
 
-  public void setGmtModified(Long gmtModified) {
-    this.gmtModified = gmtModified;
-  }
+    public Long getGmtCreate() {
+        return gmtCreate;
+    }
 
-  public String getAvatarUrl() {
-    return avatarUrl;
-  }
+    public void setGmtCreate(Long gmtCreate) {
+        this.gmtCreate = gmtCreate;
+    }
 
-  public void setAvatarUrl(String avatarUrl) {
-    this.avatarUrl = avatarUrl;
-  }
+    public Long getGmtModified() {
+        return gmtModified;
+    }
+
+    public void setGmtModified(Long gmtModified) {
+        this.gmtModified = gmtModified;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio == null ? null : bio.trim();
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl == null ? null : avatarUrl.trim();
+    }
 }

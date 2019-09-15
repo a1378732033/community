@@ -1,24 +1,41 @@
 package life.gjj.community.community.mapper;
-import life.gjj.community.community.model.Question;
-import org.apache.ibatis.annotations.*;
+
 import java.util.List;
+import life.gjj.community.community.model.Question;
+import life.gjj.community.community.model.QuestionExample;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.session.RowBounds;
 
 public interface QuestionMapper {
-    @Insert("insert into question (title,description,gmt_create,gmt_modified,creator,tag) " +
-            "values (#{title},#{description},#{gmtCreate},#{gmtModified},#{creator},#{tag}) ")
-    @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn ="id" )
-    public  void create(Question question);
-    @Select("select *from question limit #{offset},#{size}")
-    List<Question> list(@Param(value = "offset") Integer offset, @Param(value = "size") Integer size);
-    @Select("select  count(1) from question")
-    Integer count();
-    @Select("select *from question where creator=#{userId} limit #{offset},#{size}")
-    List<Question> listByUserId(@Param(value = "userId") Integer userId, @Param(value = "offset") Integer offset, @Param(value = "size") Integer size);
-    @Select("select count(1) from question where creator=#{userId}")
-    Integer countByUserId(@Param(value = "userId") Integer userId);
-    @Select("select *from question where id=#{id}")
-    Question getById(@Param("id") Integer id);
-    @Update("update question set title=#{title},description=#{description},gmt_modified=#{gmtModified},tag=#{tag} where " +
-            "id=#{id}")
-    void update(Question question);
+    long countByExample(QuestionExample example);
+
+    int deleteByExample(QuestionExample example);
+
+    int deleteByPrimaryKey(Long id);
+
+    int insert(Question record);
+
+    int insertSelective(Question record);
+
+    List<Question> selectByExampleWithBLOBsWithRowbounds(QuestionExample example, RowBounds rowBounds);
+
+    List<Question> selectByExampleWithBLOBs(QuestionExample example);
+
+    List<Question> selectByExampleWithRowbounds(QuestionExample example, RowBounds rowBounds);
+
+    List<Question> selectByExample(QuestionExample example);
+
+    Question selectByPrimaryKey(Long id);
+
+    int updateByExampleSelective(@Param("record") Question record, @Param("example") QuestionExample example);
+
+    int updateByExampleWithBLOBs(@Param("record") Question record, @Param("example") QuestionExample example);
+
+    int updateByExample(@Param("record") Question record, @Param("example") QuestionExample example);
+
+    int updateByPrimaryKeySelective(Question record);
+
+    int updateByPrimaryKeyWithBLOBs(Question record);
+
+    int updateByPrimaryKey(Question record);
 }

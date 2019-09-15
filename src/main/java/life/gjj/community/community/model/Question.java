@@ -1,57 +1,31 @@
 package life.gjj.community.community.model;
 
-import lombok.Data;
-
-@Data
 public class Question {
-    private Integer id;
+    private Long id;
+
     private String title;
-    private String description;
+
     private Long gmtCreate;
+
     private Long gmtModified;
-    private Integer creator;
+
+    private Long creator;
+
     private Integer commentCount;
+
     private Integer viewCount;
+
     private Integer likeCount;
+
     private String tag;
 
-    public Question() {
-    }
+    private String description;
 
-    public Question(Integer id, String title, String description, Long gmtCreate, Long gmtModified, Integer creator, Integer commentCount, Integer viewCount, Integer likeCount, String tag) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.gmtCreate = gmtCreate;
-        this.gmtModified = gmtModified;
-        this.creator = creator;
-        this.commentCount = commentCount;
-        this.viewCount = viewCount;
-        this.likeCount = likeCount;
-        this.tag = tag;
-    }
-
-    @Override
-    public String toString() {
-        return "Question{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", gmtCreate=" + gmtCreate +
-                ", gmtModified=" + gmtModified +
-                ", creator=" + creator +
-                ", commentCount=" + commentCount +
-                ", viewCount=" + viewCount +
-                ", likeCount=" + likeCount +
-                ", tag='" + tag + '\'' +
-                '}';
-    }
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -60,15 +34,7 @@ public class Question {
     }
 
     public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+        this.title = title == null ? null : title.trim();
     }
 
     public Long getGmtCreate() {
@@ -87,11 +53,11 @@ public class Question {
         this.gmtModified = gmtModified;
     }
 
-    public Integer getCreator() {
+    public Long getCreator() {
         return creator;
     }
 
-    public void setCreator(Integer creator) {
+    public void setCreator(Long creator) {
         this.creator = creator;
     }
 
@@ -124,6 +90,14 @@ public class Question {
     }
 
     public void setTag(String tag) {
-        this.tag = tag;
+        this.tag = tag == null ? null : tag.trim();
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
     }
 }

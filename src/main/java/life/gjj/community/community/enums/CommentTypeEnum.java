@@ -1,5 +1,4 @@
 package life.gjj.community.community.enums;
-
 public enum CommentTypeEnum {
     QUESTION(1),
     COMMENT(2);
@@ -22,3 +21,4 @@ public enum CommentTypeEnum {
         this.type = type;
     }
 }
+

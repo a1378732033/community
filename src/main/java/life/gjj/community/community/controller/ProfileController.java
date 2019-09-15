@@ -2,8 +2,6 @@ package life.gjj.community.community.controller;
 
 
 import life.gjj.community.community.dto.PaginationDTO;
-import life.gjj.community.community.mapper.QuestionMapper;
-import life.gjj.community.community.mapper.UserMapper;
 import life.gjj.community.community.model.User;
 import life.gjj.community.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
