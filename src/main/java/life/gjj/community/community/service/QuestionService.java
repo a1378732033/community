@@ -2,6 +2,9 @@ package life.gjj.community.community.service;
 
 import life.gjj.community.community.dto.PaginationDTO;
 import life.gjj.community.community.dto.QuestionDTO;
+import life.gjj.community.community.exception.CustomizeErrorCode;
+import life.gjj.community.community.exception.CustomizeException;
+import life.gjj.community.community.mapper.QuestionExtMapper;
 import life.gjj.community.community.mapper.QuestionMapper;
 import life.gjj.community.community.mapper.UserMapper;
 import life.gjj.community.community.model.Question;
@@ -22,6 +25,8 @@ public class QuestionService {
     QuestionMapper questionMapper;
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    QuestionExtMapper questionExtMapper;
     public PaginationDTO list(Integer page, Integer size) {
         PaginationDTO paginationDTO = new PaginationDTO();
         Integer totalcount =  (int)questionMapper.countByExample(new QuestionExample());
@@ -91,6 +96,9 @@ public class QuestionService {
 
     public QuestionDTO getById(Long id) {
       Question question=questionMapper.selectByPrimaryKey(id);
+    if (question==null){
+      throw  new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+    }
       QuestionDTO questionDTO=new QuestionDTO();
       BeanUtils.copyProperties(question,questionDTO);
       User user =userMapper.selectByPrimaryKey(question.getCreator());
@@ -113,7 +121,16 @@ public class QuestionService {
             updateQuestion.setTag(question.getTag());
             QuestionExample example = new QuestionExample();
             example.createCriteria().andIdEqualTo(question.getId());
-            questionMapper.updateByExampleSelective(updateQuestion, example);
+            int updated = questionMapper.updateByExampleSelective(updateQuestion, example);
+            if (updated!=1){
+               throw  new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
+            }
         }
+    }
+    public void incView(Long id) {
+        Question question = new Question();
+        question.setId(id);
+        question.setViewCount(1);
+        questionExtMapper.incView(question);
     }
 }
