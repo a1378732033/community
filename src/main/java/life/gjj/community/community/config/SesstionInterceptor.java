@@ -35,6 +35,9 @@ public class SesstionInterceptor implements HandlerInterceptor {
                 }
             }
         }
+        Cookie jsCookie=new Cookie("JSESSIONID",null);
+        jsCookie.setMaxAge(0);
+        response.addCookie(jsCookie);
         return true;
     }
 
