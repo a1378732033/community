@@ -103,3 +103,17 @@ function collapseComments(e) {
             }
     }
 }
+function selectTag(e) {
+    var value = e.getAttribute("data-tag");
+    var pervious=$("#tag").val();
+    if (pervious.indexOf(value)==-1){
+        if (pervious){
+            $("#tag").val(pervious+","+value);
+        }else {
+            $("#tag").val(value);
+        }
+    }
+}
+function showSelectTag(){
+  $("#select-tag").show();
+}

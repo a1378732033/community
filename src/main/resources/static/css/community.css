@@ -68,6 +68,32 @@ body{
 .a-commet{
     float: right;
 }
+.a-commet-profile{
+
+}
 .comment-sp {
     margin-top: 0;
+}
+.question-tge{
+    margin-right: 5px;
+}
+.question-related {
+    line-height: 25px;
+    font-size: 14px;
+    margin-left:0;
+    list-style: none;
+    padding-left: 0;
+}
+.question-weixin{
+    width: 50%;
+}
+.publish-tag-tab{
+    display: none;
+    margin-top: 10px;
+}
+.publish-tag-tab .label-info {
+    margin: 5px 5px;
+    white-space: normal;
+    display:inline-block;
+    cursor: pointer;
 }

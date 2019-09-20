@@ -1,9 +1,12 @@
 package life.gjj.community.community.controller;
+import life.gjj.community.community.cache.TagCache;
 import life.gjj.community.community.dto.QuestionDTO;
+import life.gjj.community.community.dto.TagDTO;
 import life.gjj.community.community.mapper.QuestionMapper;
 import life.gjj.community.community.model.Question;
 import life.gjj.community.community.model.User;
 import life.gjj.community.community.service.QuestionService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,8 +30,8 @@ public class PublishController {
         return "pubilsh";
     }
     @GetMapping("/pubilsh")
-    public  String pubilsh(){
-
+    public  String pubilsh(Model model){
+        model.addAttribute("tags",TagCache.get());
         return "pubilsh";
     }
     @PostMapping("/publish")
@@ -43,6 +46,7 @@ public class PublishController {
         model.addAttribute("title",title);
         model.addAttribute("description",description);
         model.addAttribute("tag",tag);
+        model.addAttribute("tags",TagCache.get());
         if (title==null||title==""){
             model.addAttribute("error","标题不能为空");
             return "pubilsh";
@@ -52,12 +56,18 @@ public class PublishController {
             return "pubilsh";
         }
         if (tag==null||tag==""){
-            model.addAttribute("error","请添加标签");
+            model.addAttribute("error","标签不能为空");
             return "pubilsh";
         }
+
         User user = (User)request.getSession().getAttribute("user");
         if (user==null){
             model.addAttribute("error","请重新登录");
+            return "pubilsh";
+        }
+        String invalid = TagCache.filterInvalid(tag);
+        if (StringUtils.isNotBlank(invalid)){
+            model.addAttribute("error","输入非法标签"+invalid);
             return "pubilsh";
         }
         Question question = new Question();
