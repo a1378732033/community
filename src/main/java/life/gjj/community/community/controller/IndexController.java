@@ -15,10 +15,12 @@ public class IndexController {
     QuestionService questionService;
     @GetMapping("/")
     public String hell(HttpServletRequest request,Model model,
-                       @RequestParam(value = "page",defaultValue = "1")Integer page,
-                       @RequestParam(value = "size",defaultValue = "4")Integer size){
-        PaginationDTO pagination=questionService.list(page,size);
+                       @RequestParam(name = "page",defaultValue = "1")Integer page,
+                       @RequestParam(name= "size",defaultValue = "4")Integer size,
+                       @RequestParam(name = "search",required = false)String search){
+        PaginationDTO pagination=questionService.list(search,page,size);
         model.addAttribute("pagination",pagination);
+        model.addAttribute("search",search);
         return "index";
     }
 }

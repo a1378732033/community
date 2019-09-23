@@ -1,5 +1,6 @@
 package life.gjj.community.community.mapper;
 
+import life.gjj.community.community.dto.QuestionQueryDTO;
 import life.gjj.community.community.model.Question;
 import life.gjj.community.community.model.QuestionExample;
 import org.apache.ibatis.annotations.Param;
@@ -11,4 +12,6 @@ public interface QuestionExtMapper {
   int incView(Question record);
   int incCommentCount(Question record);
   List<Question> selectRelate(Question question);
+  Integer countBySearch(QuestionQueryDTO questionQueryDTO);
+  List<Question> selectBysearch(QuestionQueryDTO questionQueryDTO);
 }

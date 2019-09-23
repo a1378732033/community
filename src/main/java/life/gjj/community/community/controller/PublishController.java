@@ -1,8 +1,6 @@
 package life.gjj.community.community.controller;
 import life.gjj.community.community.cache.TagCache;
 import life.gjj.community.community.dto.QuestionDTO;
-import life.gjj.community.community.dto.TagDTO;
-import life.gjj.community.community.mapper.QuestionMapper;
 import life.gjj.community.community.model.Question;
 import life.gjj.community.community.model.User;
 import life.gjj.community.community.service.QuestionService;
@@ -27,6 +25,7 @@ public class PublishController {
         model.addAttribute("description",question.getDescription());
         model.addAttribute("tag",question.getTag());
         model.addAttribute("id",question.getId());
+        model.addAttribute("tags",TagCache.get());
         return "pubilsh";
     }
     @GetMapping("/pubilsh")

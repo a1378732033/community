@@ -38,7 +38,9 @@ public class AuthorizeController {
         accessTikenDTO.setCode(code);
         accessTikenDTO.setRedirect_uri(redirectUri);
         accessTikenDTO.setState(state);
+        //发送Post请求 传入accessTikenDTO 获取accessToken
         String accessToken = gitHubProvider.getAccessToken(accessTikenDTO);
+        //发送Get请求 传入accessToken获取到User对象
         GitHubUser gitHubuser = gitHubProvider.gitHubUser(accessToken);
       if(gitHubuser!=null&&gitHubuser.getId()!=null){
           //登陆成功

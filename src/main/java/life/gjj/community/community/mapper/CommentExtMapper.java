@@ -5,4 +5,4 @@ import life.gjj.community.community.model.Question;
 
 public interface CommentExtMapper {
   int incCommentCount(Comment comment);
-}
+        }

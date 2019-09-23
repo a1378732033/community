@@ -40,7 +40,6 @@ public class ProfileController {
             model.addAttribute("section","repies");
             model.addAttribute("pagination",paginationDTO);
             model.addAttribute("sectionName","最新消息");
-            model.addAttribute("unredCount",unredCount);
 
         }
         return "profile";

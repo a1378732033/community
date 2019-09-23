@@ -28,7 +28,7 @@ public class CommentController {
             return ResultDTO.error(CustomizeErrorCode.NO_LOGIN);
         }
         if ( commentCreateDTO==null || StringUtils.isBlank(commentCreateDTO.getContent())){
-            return  ResultDTO.error(CustomizeErrorCode.CONTENT_IS_ENPY);
+            return  ResultDTO.error(CustomizeErrorCode.ONTENT_IS_ENPY);
         }
         Comment comment = new Comment();
         comment.setParentId(commentCreateDTO.getParentId());

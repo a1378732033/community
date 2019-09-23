@@ -1,6 +1,8 @@
 package life.gjj.community.community.mapper;
 
 import java.util.List;
+
+import life.gjj.community.community.dto.QuestionQueryDTO;
 import life.gjj.community.community.model.Question;
 import life.gjj.community.community.model.QuestionExample;
 import org.apache.ibatis.annotations.Param;
@@ -38,4 +40,5 @@ public interface QuestionMapper {
     int updateByPrimaryKeyWithBLOBs(Question record);
 
     int updateByPrimaryKey(Question record);
+
 }

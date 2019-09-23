@@ -2,6 +2,7 @@ package life.gjj.community.community.service;
 
 import life.gjj.community.community.dto.PaginationDTO;
 import life.gjj.community.community.dto.QuestionDTO;
+import life.gjj.community.community.dto.QuestionQueryDTO;
 import life.gjj.community.community.exception.CustomizeErrorCode;
 import life.gjj.community.community.exception.CustomizeException;
 import life.gjj.community.community.mapper.QuestionExtMapper;
@@ -31,9 +32,16 @@ public class QuestionService {
     UserMapper userMapper;
     @Autowired
     QuestionExtMapper questionExtMapper;
-    public PaginationDTO list(Integer page, Integer size) {
+    public PaginationDTO list(String search,Integer page, Integer size) {
+        if (StringUtils.isNotBlank(search)){
+            String[] tags = StringUtils.split(search, " ");
+            search = Arrays.stream(tags).collect(Collectors.joining("|"));
+        }
         PaginationDTO paginationDTO = new PaginationDTO();
-        Integer totalcount =  (int)questionMapper.countByExample(new QuestionExample());
+
+        QuestionQueryDTO questionQueryDTO = new QuestionQueryDTO();
+        questionQueryDTO.setSearch(search);
+        Integer totalcount = questionExtMapper.countBySearch(questionQueryDTO);
         Integer totalPage;
         if(totalcount % size==0){
             totalPage=totalcount/size;
@@ -48,9 +56,9 @@ public class QuestionService {
         }
         paginationDTO.setPagintion(totalPage,page);
         Integer offset=size*(page-1);
-        QuestionExample example = new QuestionExample();
-        example.setOrderByClause("gmt_create desc");
-        List<Question> questions = questionMapper.selectByExampleWithBLOBsWithRowbounds(example, new RowBounds(offset, size));
+        questionQueryDTO.setPage(offset);
+        questionQueryDTO.setSize(size);
+        List<Question> questions = questionExtMapper.selectBysearch(questionQueryDTO);
         List<QuestionDTO> questionDTOList=new ArrayList();
         for (Question question:questions){
           User user =userMapper.selectByPrimaryKey(question.getCreator());
@@ -60,8 +68,6 @@ public class QuestionService {
        questionDTOList.add(questionDTO);
         }
         paginationDTO.setData(questionDTOList);
-
-
         return paginationDTO;
     }
 

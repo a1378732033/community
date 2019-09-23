@@ -7,7 +7,10 @@ public enum CustomizeErrorCode implements  ICustomizeErrorCode {
     SYS_ERROR(400,"服务器异常"),
     TYPE_PARAM_WRONG(500,"评论类型错误或者不存在"),
     COMMENT_NOT_FOUND (501,"评论不存在"),
-    CONTENT_IS_ENPY(502,"评论不能为空");
+    ONTENT_IS_ENPY(502,"评论不能为空"),
+    READ_NOTIFICATION_FAIL(503,"没有权限访问"),
+    NOTIFICATION_NOT_FOUND(504,"你找的问题或评论不存在或已删除"),
+    FILE_UPLOAD_FAIL(505,"图片上传失败"),;
 
     private  String message;
     CustomizeErrorCode(String message) {

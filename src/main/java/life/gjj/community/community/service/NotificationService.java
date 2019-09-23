@@ -2,7 +2,10 @@ package life.gjj.community.community.service;
 
 import life.gjj.community.community.dto.NotificationDTO;
 import life.gjj.community.community.dto.PaginationDTO;
+import life.gjj.community.community.enums.NotificationStatusEnum;
 import life.gjj.community.community.enums.NotificationTypeEnum;
+import life.gjj.community.community.exception.CustomizeErrorCode;
+import life.gjj.community.community.exception.CustomizeException;
 import life.gjj.community.community.mapper.NotificationMapper;
 import life.gjj.community.community.mapper.UserMapper;
 import life.gjj.community.community.model.*;
@@ -42,6 +45,7 @@ public class NotificationService {
         Integer offset=size*(page-1);
        NotificationExample example = new  NotificationExample();
         example.createCriteria().andReceiverEqualTo(userId);
+        example.setOrderByClause("gmt_create desc");
         List<Notification> notifications = notificationMapper.selectByExampleWithRowbounds(example, new RowBounds(offset, size));
         if (notifications.size()==0){
             return paginationDTO;
@@ -50,7 +54,7 @@ public class NotificationService {
         for (Notification notification : notifications) {
             NotificationDTO notificationDTO = new NotificationDTO();
             BeanUtils.copyProperties(notification,notificationDTO);
-            notificationDTO.setType(NotificationTypeEnum.nameOfType(notification.getType()));
+            notificationDTO.setTypeName(NotificationTypeEnum.nameOfType(notification.getType()));
             notificationDTOS.add(notificationDTO);
         }
         paginationDTO.setData(notificationDTOS);
@@ -59,7 +63,24 @@ public class NotificationService {
 
     public Long underadCount(Long userId) {
         NotificationExample notificationExample = new NotificationExample();
-        notificationExample.createCriteria().andReceiverEqualTo(userId);
+        notificationExample.createCriteria().andReceiverEqualTo(userId)
+        .andStatusEqualTo(NotificationStatusEnum.UNREAD.getStatus());
        return notificationMapper.countByExample(notificationExample);
+    }
+
+    public NotificationDTO read(Long id, User user) {
+        Notification notification = notificationMapper.selectByPrimaryKey(id);
+        if (notification.getReceiver()==null){
+            throw new CustomizeException(CustomizeErrorCode.NOTIFICATION_NOT_FOUND);
+        }
+        if (!notification.getReceiver().equals(user.getId())){
+          throw new CustomizeException(CustomizeErrorCode.READ_NOTIFICATION_FAIL);
+        }
+        notification.setStatus(NotificationStatusEnum.READ.getStatus());
+        notificationMapper.updateByPrimaryKey(notification);
+        NotificationDTO notificationDTO = new NotificationDTO();
+        BeanUtils.copyProperties(notification,notificationDTO);
+        notificationDTO.setTypeName(NotificationTypeEnum.nameOfType(notification.getType()));
+        return notificationDTO;
     }
 }

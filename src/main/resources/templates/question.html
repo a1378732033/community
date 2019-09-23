@@ -7,10 +7,14 @@
     <link th:href="@{/css/bootstrap-theme.css}"
           rel="stylesheet">
     <link th:href="@{/css/community.css}" rel="stylesheet">
+    <link th:href="@{/css/editormd.preview.min.css}" rel="stylesheet">
     <script th:src="@{/jquery/jquery-3.4.1.min.js}"></script>
     <script th:src="@{/js/bootstrap.min.js}"></script>
     <script th:src="@{/js/community.js}"></script>
     <script th:src="@{/js/moment.js}"></script>
+    <script th:src="@{/js/editormd.min.js}"></script>
+    <script th:src="@{/js/lib/marked.min.js}"></script>
+    <script th:src="@{/js/lib/prettify.min.js}"></script>
 </head>
 <body>
 <div th:insert="~{navigation :: nav}"></div>
@@ -36,8 +40,16 @@
                 <hr class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
 <!--                内容-->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"
-                     th:text="${question.description}"></div>
-<!--                标签-->
+                     id="question-view">
+                    <textarea style="display:none;" th:text="${question.description}">
+                    </textarea>
+                </div>
+                <script type="text/javascript">
+                    $(function() {
+                        var testView = editormd.markdownToHTML("question-view", {});
+                    });
+                </script>
+                <!--                标签-->
                 <hr class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                    <span class="label label-info question-tge" th:each="tag : ${question.tag.split(',')}">
@@ -127,12 +139,13 @@
                         <div class="media-left img-rounded">
                             <a href="#">
                                 <img class="media-object1 img-rounded"
-                                     th:src="${question.user.avatarUrl}">
+                                     th:src="${session.user!=null? session.user.avatarUrl:'/img/default-avatar.png'}"
+                                >
                             </a>
                         </div>
                         <div class="media-body ">
                             <h4 class="media-heading">
-                                <span th:text="${question.user.name}"></span>
+                                <span th:text="${session.user!=null? session.user.name:'匿名用户'}"></span>
                             </h4>
                         </div>
                     </div>
