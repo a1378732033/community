@@ -1,5 +1,8 @@
 package life.gjj.community.community.model;
 
+import lombok.Data;
+
+@Data
 public class Question {
     private Long id;
 

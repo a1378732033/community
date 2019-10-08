@@ -46,7 +46,7 @@ public class AliyunProvider {
              metadata.setContentDisposition("inline");
             ossClient.putObject(bucketName, objectName,fileStream,metadata);
         Date expiration = new Date(new Date().getTime() + 3600 * 1000);
-        URL url=ossClient.generatePresignedUrl(bucketName,fileName,expiration);
+        URL url=ossClient.generatePresignedUrl(bucketName,objectName,expiration);
         imgUrl = url.toString();
         ossClient.shutdown();
         return imgUrl;

@@ -1,6 +1,7 @@
 package life.gjj.community.community.controller;
 
 import life.gjj.community.community.dto.FileDTO;
+
 import life.gjj.community.community.exception.CustomizeErrorCode;
 import life.gjj.community.community.exception.CustomizeException;
 import life.gjj.community.community.provider.AliyunProvider;
@@ -26,7 +27,7 @@ public class FileController {
     public FileDTO upload(HttpServletRequest request) throws IOException {
         MultipartHttpServletRequest multipartHttpServletRequest= (MultipartHttpServletRequest)request;
         MultipartFile file = multipartHttpServletRequest.getFile("editormd-image-file");
-        //ud文件存储
+//        //ud文件存储
         try {
             String fileName = ucloudProvider.upload(file.getInputStream(), file.getContentType(), file.getOriginalFilename());
             FileDTO fileDTO = new FileDTO();
@@ -36,7 +37,7 @@ public class FileController {
         } catch (IOException e) {
             throw  new CustomizeException(CustomizeErrorCode.FILE_UPLOAD_FAIL);
         }
-        //阿里云文件存储
+       // 阿里云文件存储
 //        String fileName = aliyunProvider.upload(file.getInputStream(), file.getOriginalFilename(), file.getContentType());
 //        FileDTO fileDTO = new FileDTO();
 //        fileDTO.setSuccess(1);
