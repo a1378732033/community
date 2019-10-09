@@ -16,3 +16,347 @@
 2019-10-09 12:07:22.881  INFO 4972 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-10-09 12:07:22.881  INFO 4972 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-10-09 12:07:22.896  INFO 4972 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2019-10-09 14:05:28.980  INFO 2996 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 2996 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 14:05:28.983  INFO 2996 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 14:05:31.181  INFO 2996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 14:05:31.232  INFO 2996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 14:05:31.232  INFO 2996 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 14:05:31.374  INFO 2996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 14:05:31.374  INFO 2996 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2244 ms
+2019-10-09 14:05:32.220  INFO 2996 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:05:32.318  INFO 2996 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 14:05:32.517  INFO 2996 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 14:05:32.718  INFO 2996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 14:05:32.815  INFO 2996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 14:05:32.825  INFO 2996 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.452 seconds (JVM running for 5.817)
+2019-10-09 14:05:32.822  INFO 2996 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 14:05:33.182  INFO 2996 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 14:05:40.345  INFO 2996 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 14:05:40.346  INFO 2996 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 14:05:40.367  INFO 2996 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 21 ms
+2019-10-09 14:05:40.538  WARN 2996 --- [http-nio-8887-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:07:01.389  WARN 2996 --- [http-nio-8887-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:12:08.814  INFO 5948 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 5948 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 14:12:08.817  INFO 5948 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 14:12:11.007  INFO 5948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 14:12:11.041  INFO 5948 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 14:12:11.041  INFO 5948 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 14:12:11.215  INFO 5948 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 14:12:11.215  INFO 5948 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2313 ms
+2019-10-09 14:12:11.967  INFO 5948 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:12:12.035  INFO 5948 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 14:12:12.240  INFO 5948 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 14:12:12.418  INFO 5948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 14:12:12.494  INFO 5948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 14:12:12.494  INFO 5948 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 14:12:12.501  INFO 5948 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.172 seconds (JVM running for 5.193)
+2019-10-09 14:12:12.834  INFO 5948 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 14:12:16.428  INFO 5948 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 14:12:16.428  INFO 5948 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 14:12:16.441  INFO 5948 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-10-09 14:12:16.612  WARN 5948 --- [http-nio-8887-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:12:18.951  WARN 5948 --- [http-nio-8887-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:14:50.299  INFO 3420 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 3420 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 14:14:50.302  INFO 3420 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 14:14:53.188  INFO 3420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 14:14:53.220  INFO 3420 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 14:14:53.221  INFO 3420 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 14:14:53.328  INFO 3420 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 14:14:53.328  INFO 3420 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2919 ms
+2019-10-09 14:14:54.152  INFO 3420 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:14:54.239  INFO 3420 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 14:14:54.470  INFO 3420 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 14:14:54.679  INFO 3420 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 14:14:54.769  INFO 3420 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 14:14:54.775  INFO 3420 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 14:14:54.784  INFO 3420 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 5.171 seconds (JVM running for 7.785)
+2019-10-09 14:14:55.155  INFO 3420 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 14:15:03.179  INFO 3420 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 14:15:03.180  INFO 3420 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 14:15:03.190  INFO 3420 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-10-09 14:15:03.374  WARN 3420 --- [http-nio-8887-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:15:08.471  WARN 3420 --- [http-nio-8887-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:15:17.535  WARN 3420 --- [http-nio-8887-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:15:19.940  INFO 3420 --- [Thread-8] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-10-09 14:15:19.943  INFO 3420 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:15:19.946  INFO 3420 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-09 14:15:19.957  INFO 3420 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-09 14:15:26.175  INFO 2596 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 2596 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 14:15:26.178  INFO 2596 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 14:15:28.622  INFO 2596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 14:15:28.679  INFO 2596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 14:15:28.680  INFO 2596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 14:15:28.855  INFO 2596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 14:15:28.856  INFO 2596 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2564 ms
+2019-10-09 14:15:29.776  INFO 2596 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:15:29.884  INFO 2596 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 14:15:30.092  INFO 2596 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 14:15:30.292  INFO 2596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 14:15:30.385  INFO 2596 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 14:15:30.389  INFO 2596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 14:15:30.396  INFO 2596 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.988 seconds (JVM running for 6.425)
+2019-10-09 14:15:30.812  INFO 2596 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 14:15:33.339  INFO 2596 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 14:15:33.341  INFO 2596 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 14:15:33.354  INFO 2596 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-10-09 14:15:33.540  WARN 2596 --- [http-nio-8887-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:15:40.696  INFO 2596 --- [Thread-8] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-10-09 14:15:40.698  INFO 2596 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:15:40.699  INFO 2596 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-09 14:15:40.707  INFO 2596 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-09 14:15:46.927  INFO 5196 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 5196 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 14:15:46.929  INFO 5196 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 14:15:49.447  INFO 5196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 14:15:49.487  INFO 5196 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 14:15:49.488  INFO 5196 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 14:15:49.609  INFO 5196 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 14:15:49.610  INFO 5196 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2512 ms
+2019-10-09 14:15:50.620  INFO 5196 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:15:50.695  INFO 5196 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 14:15:50.901  INFO 5196 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 14:15:51.108  INFO 5196 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 14:15:51.191  INFO 5196 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 14:15:51.197  INFO 5196 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 5.201 seconds (JVM running for 6.765)
+2019-10-09 14:15:51.196  INFO 5196 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 14:15:51.608  INFO 5196 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 14:15:54.728  INFO 5196 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 14:15:54.729  INFO 5196 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 14:15:54.740  INFO 5196 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-10-09 14:16:21.855  WARN 5196 --- [http-nio-8887-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:16:43.211  INFO 5196 --- [Thread-8] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-10-09 14:16:43.214  INFO 5196 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:16:43.218  INFO 5196 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-09 14:16:43.228  INFO 5196 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-09 14:16:49.548  INFO 5368 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 5368 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 14:16:49.550  INFO 5368 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 14:16:51.978  INFO 5368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 14:16:52.042  INFO 5368 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 14:16:52.043  INFO 5368 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 14:16:52.178  INFO 5368 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 14:16:52.179  INFO 5368 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2543 ms
+2019-10-09 14:16:53.155  INFO 5368 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:16:53.236  INFO 5368 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 14:16:53.445  INFO 5368 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 14:16:53.638  INFO 5368 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 14:16:53.727  INFO 5368 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 14:16:53.734  INFO 5368 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.863 seconds (JVM running for 6.452)
+2019-10-09 14:16:53.731  INFO 5368 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 14:16:54.105  INFO 5368 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 14:16:57.356  INFO 5368 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 14:16:57.357  INFO 5368 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 14:16:57.367  INFO 5368 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-10-09 14:24:02.351  WARN 5368 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m8s139ms159µs770ns).
+2019-10-09 14:24:02.527  WARN 5368 --- [http-nio-8887-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 14:24:02.582  INFO 5368 --- [Thread-8] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-10-09 14:24:02.585  INFO 5368 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:24:02.588  INFO 5368 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-09 14:24:02.600  INFO 5368 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-09 14:24:08.887  INFO 4004 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 4004 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 14:24:08.890  INFO 4004 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 14:24:11.361  INFO 4004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 14:24:11.412  INFO 4004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 14:24:11.413  INFO 4004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 14:24:11.576  INFO 4004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 14:24:11.577  INFO 4004 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2568 ms
+2019-10-09 14:24:12.518  INFO 4004 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 14:24:12.604  INFO 4004 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 14:24:12.838  INFO 4004 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 14:24:13.026  INFO 4004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 14:24:13.106  INFO 4004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 14:24:13.112  INFO 4004 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 5.06 seconds (JVM running for 6.564)
+2019-10-09 14:24:13.110  INFO 4004 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 14:24:13.462  INFO 4004 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 14:24:22.653  INFO 4004 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 14:24:22.654  INFO 4004 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 14:24:22.665  INFO 4004 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2019-10-09 18:17:47.706  WARN 4004 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3h53m33s986ms670µs906ns).
+2019-10-09 18:17:47.764  WARN 4004 --- [http-nio-8887-exec-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e320fb5 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-10-09 18:17:47.771  WARN 4004 --- [scheduling-1] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@492b7577 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2019-10-09 18:17:47.902  INFO 4004 --- [Thread-8] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-10-09 18:17:47.904  INFO 4004 --- [Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-09 18:17:47.906  INFO 4004 --- [Thread-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-09 18:17:47.914 ERROR 4004 --- [scheduling-1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task.
+
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+### The error may exist in file [C:\community\target\classes\mapper\QuestionMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionMapper.selectByExampleWithBLOBsWithRowbounds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:78) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:440) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at com.sun.proxy.$Proxy61.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:231) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:145) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:57) ~[mybatis-3.5.2.jar:3.5.2]
+	at com.sun.proxy.$Proxy73.selectByExampleWithBLOBsWithRowbounds(Unknown Source) ~[na:na]
+	at life.gjj.community.community.schedule.HotTagTasks.reportCurrentTime(HotTagTasks.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:84) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset$$$capture(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+### The error may exist in file [C:\community\target\classes\mapper\QuestionMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionMapper.selectByExampleWithBLOBsWithRowbounds
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:149) ~[mybatis-3.5.2.jar:3.5.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	... 20 common frames omitted
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) ~[mybatis-spring-2.0.2.jar:2.0.2]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:85) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83) ~[mybatis-3.5.2.jar:3.5.2]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.2.jar:3.5.2]
+	... 25 common frames omitted
+Caused by: java.sql.SQLException: HikariPool-1 - Interrupted during connection acquisition
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:194) ~[HikariCP-3.2.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:155) ~[HikariCP-3.2.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[HikariCP-3.2.0.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78) ~[spring-jdbc-5.1.9.RELEASE.jar:5.1.9.RELEASE]
+	... 35 common frames omitted
+Caused by: java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:940) ~[na:na]
+	at com.zaxxer.hikari.util.ConcurrentBag.borrow(ConcurrentBag.java:157) ~[HikariCP-3.2.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:173) ~[HikariCP-3.2.0.jar:na]
+	... 40 common frames omitted
+
+2019-10-09 18:18:04.622  INFO 3456 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 3456 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 18:18:04.624  INFO 3456 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 18:18:06.797  INFO 3456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 18:18:06.842  INFO 3456 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 18:18:06.843  INFO 3456 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 18:18:07.025  INFO 3456 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 18:18:07.025  INFO 3456 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2333 ms
+2019-10-09 18:18:08.062  INFO 3456 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 18:18:08.162  INFO 3456 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 18:18:08.370  INFO 3456 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 18:18:08.580  INFO 3456 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 18:18:08.712  INFO 3456 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 18:18:08.718  INFO 3456 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 18:18:08.720  INFO 3456 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.649 seconds (JVM running for 5.702)
+2019-10-09 18:18:18.266  INFO 3456 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 18:18:25.445  INFO 3456 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 18:18:25.446  INFO 3456 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 18:18:25.459  INFO 3456 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2019-10-09 18:18:25.685  WARN 3456 --- [http-nio-8887-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+### The error may exist in file [C:\community\target\classes\mapper\QuestionExtMapper.xml]
+### The error may involve life.gjj.community.community.mapper.QuestionExtMapper.selectBysearch-Inline
+### The error occurred while setting parameters
+### SQL: select * from question            order by gmt_create desc limit ?,?
+### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-4,4' at line 3]
+2019-10-09 18:18:55.871  INFO 4208 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 4208 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 18:18:55.873  INFO 4208 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 18:18:57.838  INFO 4208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 18:18:57.873  INFO 4208 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 18:18:57.874  INFO 4208 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 18:18:57.981  INFO 4208 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 18:18:57.982  INFO 4208 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2037 ms
+2019-10-09 18:18:58.681  INFO 4208 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 18:18:58.751  INFO 4208 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 18:18:58.949  INFO 4208 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 18:18:59.162  INFO 4208 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 18:18:59.232  INFO 4208 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 18:18:59.233  INFO 4208 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 18:18:59.241  INFO 4208 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 3.855 seconds (JVM running for 5.064)
+2019-10-09 18:18:59.600  INFO 4208 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 18:19:07.424  INFO 4208 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 18:19:07.425  INFO 4208 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 18:19:07.435  INFO 4208 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
