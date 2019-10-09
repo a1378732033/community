@@ -1,18 +1,18 @@
-2019-10-08 22:28:15.531  INFO 3404 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 3404 (C:\community\target\classes started by Administrator in C:\community)
-2019-10-08 22:28:15.537  INFO 3404 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
-2019-10-08 22:28:17.474  INFO 3404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2019-10-08 22:28:17.537  INFO 3404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-08 22:28:17.538  INFO 3404 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
-2019-10-08 22:28:17.659  INFO 3404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-08 22:28:17.659  INFO 3404 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2004 ms
-2019-10-08 22:28:18.453  INFO 3404 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-08 22:28:18.532  INFO 3404 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2019-10-08 22:28:18.743  INFO 3404 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
-2019-10-08 22:28:18.906  INFO 3404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-10-08 22:28:18.988  INFO 3404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2019-10-08 22:28:18.988  INFO 3404 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-10-08 22:28:18.996  INFO 3404 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 4.57 seconds (JVM running for 6.296)
-2019-10-08 22:28:19.694  INFO 3404 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-10-08 22:28:27.176  INFO 3404 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-08 22:28:27.177  INFO 3404 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-10-08 22:28:27.196  INFO 3404 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-10-09 12:07:12.888  INFO 4972 --- [restartedMain] l.g.c.community.CommunityApplication     : Starting CommunityApplication on PC-20190817NQOP with PID 4972 (C:\community\target\classes started by Administrator in C:\community)
+2019-10-09 12:07:12.888  INFO 4972 --- [restartedMain] l.g.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2019-10-09 12:07:15.836  INFO 4972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2019-10-09 12:07:15.898  INFO 4972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-09 12:07:15.898  INFO 4972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-10-09 12:07:16.039  INFO 4972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-09 12:07:16.039  INFO 4972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2980 ms
+2019-10-09 12:07:16.881  INFO 4972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-09 12:07:16.975  INFO 4972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-10-09 12:07:17.224  INFO 4972 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-10-09 12:07:17.412  INFO 4972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-10-09 12:07:17.505  INFO 4972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2019-10-09 12:07:17.505  INFO 4972 --- [restartedMain] l.g.c.community.CommunityApplication     : Started CommunityApplication in 5.585 seconds (JVM running for 7.397)
+2019-10-09 12:07:17.505  INFO 4972 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-09 12:07:18.004  INFO 4972 --- [scheduling-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-09 12:07:22.881  INFO 4972 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-09 12:07:22.881  INFO 4972 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-09 12:07:22.896  INFO 4972 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
