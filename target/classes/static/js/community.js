@@ -64,16 +64,16 @@ function collapseComments(e) {
                 e.classList.add("active");
             }else {
                 $.getJSON("/comment/" + id, function (data) {
-                    console.log(data);
-                    $.each(data.data.reverse(), function (index, comment) {
-                        var mediaLeftElement = $("<div/>", {
-                            "class": "media-left",
-                        }).append($("<img/>",{
-                            "class":"media-object1 img-rounded",
-                            "src":comment.user.avatarUrl
-                        }));
+                                console.log(data);
+                                $.each(data.data.reverse(), function (index, comment) {
+                                    var mediaLeftElement = $("<div/>", {
+                                        "class": "media-left",
+                                    }).append($("<img/>",{
+                                        "class":"media-object1 img-rounded",
+                                        "src":comment.user.avatarUrl
+                                    }));
 
-                        var mediaLBodyElement = $("<div/>", {
+                                    var mediaLBodyElement = $("<div/>", {
                             "class": "media-body",
                         }).append($("<h5/>",{
                             "class":"media-heading",
